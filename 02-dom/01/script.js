@@ -18,7 +18,7 @@ link1.href = "https://www.google.com";
 // now how can i add the text where i click and open the link
 link1.textContent = "Click here to visit Google";
 
-// but there is nothing like the "Click here to visit Google" on the scree
+// but there is nothing on the screen that says "Click here to visit Google" on the scree
 // use appendchild
 document.body.appendChild(link1);
 document.body.append(link1, document.createElement("br"));
