@@ -4,12 +4,17 @@
 
 let sel =   document.querySelector(".select1")
 // usign .select as select is a class name not a tag
+
+let nameofMeme = document.querySelector("#name");
+// Use # to select the id 
 sel.addEventListener("change",function(){
     // first checking what are we selecting in the console by printing the sel.value
     console.log(sel.value)
+   nameofMeme.textContent = sel.value
     if(sel.value=="Hakla-Srk"){
         let img= document.querySelector(".card-image")
         img.src="./image/hakla.jpg"
+        
     }
     if(sel.value=="Suja-Salman"){
         let img= document.querySelector(".card-image")
@@ -24,3 +29,5 @@ sel.addEventListener("change",function(){
         img.src="./image/ajay-vimal.jpg"
     }
 })
+
+

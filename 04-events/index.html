@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Generator</title>
+    <style>
+      body {
+        display: flex;
+        background-color: black;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form1 {
+        background-color: white;
+        margin: auto;
+        border-radius: 6px;
+        width: 400px;
+        padding: 5px;
+      }
+
+      label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #4b5563;
+      }
+
+      h2 {
+        text-align: center;
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      form {
+        display: grid;
+      }
+
+      .formDiv {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      input {
+        margin: 4px;
+        height: 24px;
+      }
+
+      .displayNone {
+        display: none;
+      }
+
+      .genCard {
+      
+
+        width: 350px;
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        margin: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        box-shadow:
+          0 10px 25px rgba(0, 0, 0, 0.15),
+          0 5px 10px rgba(0, 0, 0, 0.08);
+
+        transition: all 0.3s ease;
+      }
+
+      .genCard:hover {
+        transform: translateY(-5px);
+      }
+
+      .genCard img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        border: 5px solid #2563eb;
+        margin-bottom: 20px;
+      }
+
+      .genCard .name {
+        font-size: 2rem;
+        margin: 10px 0;
+        color: #111827;
+      }
+
+      .genCard .age {
+        font-size: 1rem;
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+
+      .genCard .email,
+      .genCard .phone,
+      .genCard .qualification {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0;
+
+        background-color: #f3f4f6;
+
+        border-radius: 10px;
+
+        font-size: 0.95rem;
+        color: #374151;
+      }
+
+      .displayNone {
+        display: none;
+      }
+
+      .displayNone {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="formDiv">
+        <h2>Generate your Profile</h2>
+        <form action="" id="details">
+          <input type="text" placeholder="Name" class="nameF" />
+          <input type="number" placeholder="Age" class="ageF" />
+          <input type="email" placeholder="Email" class="emailF" />
+          <input type="number" placeholder="Phone" class="phoneF" />
+          <input
+            type="text"
+            placeholder="Qualification"
+            class="qualificationF"
+          />
+          <input type="file" id="document-upload" name="uploaded_file" />
+
+          <input type="submit" id="submit" />
+        </form>
+      </div>
+
+      <div class="genCard displayNone">
+        <img src="" alt="" />
+        <h1 class="name">Name</h1>
+        <h3 class="age"></h3>
+        <h3 class="email"></h3>
+        <h3 class="phone"></h3>
+        <h3 class="qualification"></h3>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
