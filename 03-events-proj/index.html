@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. RESET & CENTER THE PARENT CONTAINER */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffdd98;
+            /* Soft light gray background */
+            min-height: 100vh;
+            /* Take up full viewport height */
+            display: flex;
+            /* Enable Flexbox */
+            justify-content: center;
+            /* Centers horizontally */
+            align-items: center;
+            /* Centers vertically */
+            padding: 20px;
+        }
+    
+        /* 2. THE CARD STYLING */
+        .card {
+            padding: 20px;
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 350px;
+            /* Prevents card from stretching too wide */
+            border-radius: 16px;
+            /* Sleek, modern rounded corners */
+           
+      
+        }
+    
+      
+    
+        /* 4. INNER CARD COMPONENTS */
+        .card-image {
+            width: 100%;
+            
+            padding: 10px;
+            object-fit: cover;
+            /* Prevents image distortion */
+        }
+    
+        .card-content {
+            padding: 24px;
+        }
+    
+        .card-title {
+            
+            font-size: 2rem;
+            color: #1f2937;
+            /* Deep dark gray for high readability */
+            margin-bottom: 8px;
+            font-weight: 800;
+            text-align: center;
+        }
+    
+        
+    
+        .select1 {
+            display: inline-block;
+            width: 100%;
+            background-color: #ff1414;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+    
+        .select:hover {
+            background-color: #cf1e1e;
+            /* Darker blue shade on button hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!--Note-  drop down is termed as option in html -->
+<div class="card">
+    <h2 class="card-title">Meme Poll </h2>
+
+    <img src="./image/reveal.jpg" class="card-image" alt="IMG">
+      <select class="select1">
+        <option selected disabled >Choose your favourite meme</option>
+        <option value="Hakla-Srk">Hakla Srk</option>
+        <option value="Suja-Salman">Suja Salman</option>
+        <option value="Banana-Akki">Banana Akki</option>
+        <option value="Vimal-Ajay">Vimal-Ajay</option>
+      </select>
+</div>
+
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

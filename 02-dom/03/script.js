@@ -43,6 +43,7 @@ lists.forEach((list, index)=>{
 
 
 // 2- Set the font size of all the <p> elelments to 18px using style
+// Note - class List is more preferred
 
 let p = document.querySelector("p")
 p.style.fontSize = "28px ";
