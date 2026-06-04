@@ -1,0 +1,142 @@
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Card Container */
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: solid 2px gray;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+}
+
+/* Form Inputs */
+.input-box{
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size:15px;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Feedback Messages */
+.feedback-msg {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  min-height: 16px; 
+}
+
+.feedback-msg.error {
+  color: #d9534f;
+}
+
+.feedback-msg.success {
+  color: #5cb85c;
+}
+
+/* Password Rules Checklist */
+.validation-rules {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.validation-rules p {
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.validation-rules ul {
+  list-style-type: none;
+  font-size: 0.85rem;
+}
+
+.validation-rules li {
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+/* JS Target Classes for Rules */
+.invalid {
+  color: #888;
+}
+
+.invalid::before {
+  content: "○ "; /* Unchecked circle */
+}
+
+.valid {
+  color: #5cb85c;
+}
+
+.valid::before {
+  content: "● "; /* Checked circle */
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+
+
+button:disabled{
+
+     cursor: not-allowed;
+     background-color: #cccccc;
+
+}

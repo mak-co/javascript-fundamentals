@@ -13,7 +13,7 @@ const movingBar = document.querySelector("#movingBar");
   window.addEventListener("mousemove", function (event) {
   
 
-    movingBar.style.left = event.clientX + "px";
+    movingBar.style.left = (event.clientX - 30) + "px";
   });
 
 

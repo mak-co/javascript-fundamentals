@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style >
+    
+</style>
+<body>
+    <div class="card">
+        <h2>Create Account</h2>
+    
+        <form  autocomplete="off" id="signup-form">
+            <div class="input-box ">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" placeholder="you@example.com">
+                <span id="emailFeedback" class="feedback-msg"></span>
+            </div>
+    
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                   
+            </div>
+    
+            <div class="validation-rules">
+                <p>Password requirements:</p>
+                <ul id="password-criteria">
+                    <li id="rule-length" class="invalid">At least 8 characters</li>
+                    <li id="rule-uppercase" class="invalid">At least one uppercase letter</li>
+                    <li id="rule-number" class="invalid">At least one number</li>
+                    <li id="rule-special" class="invalid">At least one special character</li>
+                </ul>
+            </div>
+            <button type="submit" id="submit-btn" disabled >Sign Up</button>
+        </form>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
