@@ -1,0 +1,128 @@
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.notes {
+  gap: 10px;
+  padding: 10px;
+  height: 15vh;
+}
+
+.box {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px white;
+  height: 100vh;
+}
+
+#card {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  border: solid 2px white;
+  padding: 20px;
+  border-radius: 5px;
+  height: 20%;
+  text-align: center;
+  width: 40%;
+}
+
+#download-bar {
+  width: 100%;
+  border: 1px solid white;
+  height: 10px;
+}
+
+#tracker {
+  width: 0%;
+  background-color: white;
+  height: 10px;
+}
+
+.disabled {
+  display: none;
+}
+
+#result{
+  color: white;
+  text-align: center;
+  background-color: red;
+  padding: 30px;
+  border-radius: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  background: rgb(49, 104, 255);
+  margin: 10px;
+  width: 100px;
+  padding: 5px;
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+}
+
+button:hover {
+  background: rgb(18, 81, 254);
+}
+
+button:active {
+  box-shadow: 0 0 #0056b3;
+  /* Flattens the bottom shadow */
+  transform: translateY(4px);
+  /* Moves the button down 4 pixels */
+}
+
+#queCard {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: auto;
+  border: solid 2px white;
+  color: white;
+  padding-inline: 20px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.que {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.option {
+  margin: 5px 0;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+
+#colOpTimer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#timer{
+ border: solid 5px cyan;
+ justify-content: center;
+ width: 80px;
+ height: 80px;
+ align-items: center;
+ display: flex;
+ gap: auto;
+ border-radius: 50px;
+ font-size: 50px;
+}
