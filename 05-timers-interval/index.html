@@ -11,32 +11,48 @@
 <body>
 
 
+
+
     <div class="box">
+
+        <!-- heading and start button for the quiz -->
+        <div class="heading">
+            <h1>QUIZ</h1>
+            <h2>Why are you Gay!</h2>
+        </div>
+        <div>
+            <button id="start">Start</button>
+        </div>
 
 
         <!-- question mcq card -->
 
         <div id="queCard" class="">
-            <h2 class="que">1) Do you open Snapchat at the dinner table?</h2>
+            <h2 class="que"></h2>
             <div id="colOpTimer">
                 <div class="options">
                     <div class="option">
-                        <input type="radio" name="answer" id="r1">
-                        <label for="1" id="op1">Never</label>
+                        <input type="radio" name="answer"  id="r1" value="0">
+                        <label for="1" id="op1"></label>
                     </div>
                     <div class="option">
-                        <input type="radio" name="answer" id="r2">
-                        <label for="2" id="op2">Always</label>
+                        <input type="radio" name="answer" id="r2" value="1">
+                        <label for="2" id="op2"></label>
                     </div>
                     <div class="option">
-                        <input type="radio" name="answer" id="r3">
-                        <label for="3" id="op3">Sometimes</label>
+                        <input type="radio" name="answer" id="r3" value="2">
+                        <label for="3" id="op3"></label>
                     </div>
                     <div class="option">
-                        <input type="radio" name="answer" id="r4">
-                        <label for="4" id="op4">Rarely</label>
+                        <input type="radio" name="answer" id="r4" value="3">
+                        <label for="4" id="op4"></label>
                     </div>
                 </div>
+
+
+
+
+                <!-- Timer -->
                 <div id="timer"></div>
 
             </div>
@@ -54,6 +70,7 @@
 
 
 
+<!-- analysing Card -->
         <div id="card" class="disabled">
             <h1>Analysing....</h1>
 
@@ -63,7 +80,7 @@
             </div>
         </div>
         <div id="result" class="disabled">
-            <h1>Congrats You are 100% GAY!</h1>
+            <h1 >"`${score}/20`"</h1>
         </div>
     </div>
 

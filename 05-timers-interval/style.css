@@ -4,26 +4,48 @@ body {
   flex-direction: column;
 }
 
-.notes {
-  gap: 10px;
-  padding: 10px;
-  height: 15vh;
+.heading{
+ 
+  width: 200px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+
+h1{
+  text-align: center;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 4px;
+}
+
+h2{
+  text-align: center;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 0px;
+}
+
+
+#start{
+  background-color: red;
 }
 
 .box {
   background-color: black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid 2px white;
   height: 100vh;
+  
 }
 
 #card {
   color: white;
   font-family: "Courier New", Courier, monospace;
   border: solid 2px white;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   height: 20%;
   text-align: center;
@@ -89,7 +111,9 @@ button:active {
   color: white;
   padding-inline: 20px;
   padding-bottom: 10px;
+  padding-top: 10px;
   border-radius: 10px;
+  display: none;
 }
 
 .que {
