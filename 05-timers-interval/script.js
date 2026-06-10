@@ -1,10 +1,12 @@
 const questions = [
   {
+    //1
     question: "Which keyword is used to declare a constant?",
     options: ["var", "let", "const", "constant"],
     answer: 2,
   },
   {
+    //2
     question: "What does DOM stand for?",
     options: [
       "Document Object Model",
@@ -15,6 +17,7 @@ const questions = [
     answer: 0,
   },
   {
+    //3
     question: "Which method selects an element by id?",
     options: [
       "querySelector()",
@@ -25,124 +28,58 @@ const questions = [
     answer: 1,
   },
   {
+    //4
     question: "Which event occurs when a button is clicked?",
     options: ["submit", "hover", "click", "load"],
     answer: 2,
   },
   {
+    //5
     question: "What is the output type of prompt()?",
     options: ["Number", "String", "Boolean", "Object"],
     answer: 1,
   },
-  {
+  {//6
     question: "Which operator means strict equality?",
     options: ["==", "=", "===", "!="],
     answer: 2,
   },
-  {
+  {//7
     question: "Which array method adds an item at the end?",
     options: ["push()", "pop()", "shift()", "slice()"],
     answer: 0,
   },
-  {
+  {//8
     question: "Which array method removes the last item?",
     options: ["push()", "shift()", "splice()", "pop()"],
     answer: 3,
   },
-  {
+  {//9
     question: "How do you write a comment in JS?",
     options: ["// comment", "<!-- comment -->", "# comment", "** comment **"],
     answer: 0,
   },
-  {
+  {//10
     question: "Which keyword declares a block-scoped variable?",
     options: ["var", "let", "int", "define"],
     answer: 1,
   },
-  {
-    question: "Which method converts JSON string into JS object?",
-    options: [
-      "JSON.stringify()",
-      "JSON.parse()",
-      "JSON.convert()",
-      "JSON.object()",
-    ],
-    answer: 1,
-  },
-  {
-    question: "Which method converts JS object into JSON string?",
-    options: [
-      "JSON.parse()",
-      "JSON.stringify()",
-      "JSON.convert()",
-      "JSON.text()",
-    ],
-    answer: 1,
-  },
-  {
-    question: "What does addEventListener() do?",
-    options: [
-      "Creates HTML",
-      "Adds CSS",
-      "Listens for events",
-      "Deletes elements",
-    ],
-    answer: 2,
-  },
-  {
-    question: "Which method creates a new element?",
-    options: [
-      "appendChild()",
-      "createElement()",
-      "newElement()",
-      "insertElement()",
-    ],
-    answer: 1,
-  },
-  {
-    question: "Which method removes an element?",
-    options: ["deleteElement()", "remove()", "destroy()", "erase()"],
-    answer: 1,
-  },
-  {
-    question: "Which loop runs at least once?",
-    options: ["for", "while", "do...while", "foreach"],
-    answer: 2,
-  },
-  {
-    question: "Which function delays execution once?",
-    options: ["setTimeout()", "setInterval()", "clearTimeout()", "delay()"],
-    answer: 0,
-  },
-  {
-    question: "Which function repeats execution?",
-    options: ["setInterval()", "setTimeout()", "repeat()", "loop()"],
-    answer: 0,
-  },
-  {
-    question: "What does preventDefault() do?",
-    options: [
-      "Stops page refresh/default action",
-      "Deletes form",
-      "Reloads page",
-      "Stops JavaScript",
-    ],
-    answer: 0,
-  },
-  {
-    question: "Which method checks if a regex matches a string?",
-    options: [".match()", ".check()", ".test()", ".verify()"],
-    answer: 2,
-  },
+  
 ];
 
+// Grabing elemetns--------->
 let tracker = document.querySelector("#tracker");
-let count = 0;
 let downloadCount = document.querySelector("h3");
-const reult = document.querySelector("#result");
+const result = document.querySelector("#result");
 
-// -----------analysing card---------------
+
+// -----------analysing card--------------->
+let count = 0;
 function analyseCard() {
+  // Clearing the interval to avoid multiple setinterval run at a time 
+  clearInterval(intervalId);
+
+  // setting up the interval for the loading bar
   setInterval(function () {
     if (count <= 99) {
       result.style.display = "none";
@@ -155,9 +92,13 @@ function analyseCard() {
       result.style.display = "block";
     }
   }, 10);
+
+  // testing funciton to check the anwers
+  testing();
+  return;
 }
 
-// data for mcq card ----------------
+// Grabbing data for mcq card -------->
 const card = document.querySelector("#card");
 const queCard = document.querySelector("#queCard");
 
@@ -167,28 +108,29 @@ let op2 = document.querySelector("#op2");
 let op3 = document.querySelector("#op3");
 let op4 = document.querySelector("#op4");
 
-// radio input
+// grabbing the radio input
 let r1 = document.querySelector("#r1");
 let r2 = document.querySelector("#r2");
 let r3 = document.querySelector("#r3");
 let r4 = document.querySelector("#r4");
 
+// grabbing the save buttons
 const save = document.querySelector("#save");
 
-// switching quesiton when click ----------------
 
 // creatign function to switch the question card
 let i = 0;
 function switchQue() {
-  timerFunct();
-  emptInput();
-  if (i === questions.length - 1) {
+  queCard.style.display = "block";
+  timerFunct();  //running timer when qustin changes
+  emptInput(); //radio input get empty
+  if (i === questions.length - 1) {  // changing save buttons text to submit when reaching last quesion
     save.textContent = "Submit";
   }
   if (i === questions.length) {
-    queCard.style.display = "none";
-    analyseCard();
-    return;
+    queCard.style.display = "none"; //after clicking on the submit button question disappears
+    analyseCard(); //pushing answers or the value of the selected radio  the answer array 
+    return; //why used return ?
   }
 
   // changing content of the card when funciton call
@@ -206,15 +148,18 @@ function switchQue() {
 // declaring intervalId outside the function
 let intervalId;
 
+// grabbing timer 
 const timer = document.querySelector("#timer");
 
 function timerFunct() {
-  let j = 5;
-  timer.textContent = j;
+  let j = 5;   //timer starts from - 5
+  timer.textContent = j; //setting timers text content to 5
 
   // clearing the already running setInterval to avoid more than 1 timer to  run simultaneously
+  //que - instead of clearing the interval why dont we clear the funciton itself ?
   clearInterval(intervalId);
 
+  //setting interval to run after every 1 second and saving it inside a varaible to use it further or to clearInterval
   intervalId = setInterval(() => {
     timer.textContent = j - 1;
 
@@ -229,44 +174,46 @@ function timerFunct() {
 
     // chagning quesiton when timer passes 0 and rerunning the timerfunciton and which will cause previous setinterval to rerun therefor used clearinterval to clear the previous runnign timer
     if (j === 0) {
-      console.log(j);
-
-      clearInterval(intervalId);
+      answers();
       timerFunct();
       switchQue();
-
       return;
     }
-
     j--;
+   
   }, 1000);
 }
 
 // -------------heading-----------
 
+//grabing heading and start button elem ---
 let heading = document.querySelector(".heading");
 let start = document.querySelector("#start");
 
+
+// start button features - 
 start.addEventListener("click", () => {
   timerFunct();
-  queCard.style.display = "block";
+  switchQue();
   start.style.display = "none";
   heading.style.display = "none";
-  switchQue();
 });
 
+// save button features
 save.addEventListener("click", () => {
-  const answerSaved = answers();
-  if (!answerSaved) {
-    alert("please select");
-  } else {
-    switchQue();
-    timerFunct();
-    answers();
+  if (!document.querySelector('input[name="answer"]:checked')) {
+    alert("select an option");
+    return
   }
+  
+  answers();
+  switchQue();
+  timerFunct();
 });
 
-// pushing answers in an array when calling answer() function  -------------------------------------
+
+
+// creating answers funciton to push answers in an array when calling answer() function  ------------------------>
 
 // creatign an array to save the answers -
 const userAnswers = [];
@@ -274,19 +221,19 @@ const userAnswers = [];
 // creating a funciton for the process to use it when clicking save answers ---
 function answers() {
   //Firstly saving the selected option in a varible
-  let selectedRadio = document.querySelector('input[name="answer"]:checked');
-
-  //Secondly gettign the selected options value-
-  const selectedOptionIndex = Number(selectedRadio.value);
+  let selectedRadio = document.querySelector('input[name="answer"]:checked'); //que - why const worked not let
 
   //now if option is selected(true) then pushing its value (0 or 1 or 2 or 3) in the array as userAnswers
   if (selectedRadio) {
+    //Secondly gettign the selected options value-
+    const selectedOptionIndex = Number(selectedRadio.value);
     userAnswers.push(selectedOptionIndex);
-
+    
     // calling the empty option fucnction
-
     return true; //to use it outside the funciton
   } else {
+    //pushin 5 for empty radio when timer passes 0 only 
+    userAnswers.push(Number(5));
     return false;
     //returning this to use selectedRaio outside the funciton in save buttons eventlistener
   }
@@ -302,14 +249,16 @@ function emptInput() {
 }
 
 // testing the answers ---
-let score = 0;
 
 function testing() {
+  let score = 0; //why storing inside the funciton?
   for (let i = 0; i < questions.length; i++) {
     if (userAnswers[i] === questions[i].answer) {
       score++;
     }
   }
-}
 
-console.log(score);
+  // changing the innerhtml of the result 
+  result.innerHTML = `<h1>Your Score is = ${score}/${questions.length}</h1>`;
+  return;
+} 
